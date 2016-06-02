@@ -67,7 +67,7 @@ export default Em.Component.extend({
     });
   },
 
-  itemObserver: Em.observer('items', function(){
+  itemObserver: Em.observer('items.@each', function(){
     var component = this;
     component._initItemGallery();
   }),
