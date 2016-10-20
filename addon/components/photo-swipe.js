@@ -70,6 +70,9 @@ export default Em.Component.extend({
   itemObserver: Em.observer('items.@each', function(){
     var component = this;
     component._initItemGallery();
+    run.next(function() {
+      component._initItemGallery();
+    });
   }),
 
   /**
